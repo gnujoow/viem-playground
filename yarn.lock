@@ -5,6 +5,13 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@adraffy/ens-normalize@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@adraffy/ens-normalize@npm:1.9.0"
+  checksum: a8d47f85db7a0bba01227fae8781a3245a4517875503d6848a47ca29e7f7da271742a2f93b55afc1b9201e74eda1fd1f1e6e79e70f967359fd7f6ec3d45bf243
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.20.7":
   version: 7.22.5
   resolution: "@babel/runtime@npm:7.22.5"
@@ -160,6 +167,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@noble/curves@npm:1.0.0, @noble/curves@npm:~1.0.0":
+  version: 1.0.0
+  resolution: "@noble/curves@npm:1.0.0"
+  dependencies:
+    "@noble/hashes": 1.3.0
+  checksum: 6bcef44d626c640dc8961819d68dd67dffb907e3b973b7c27efe0ecdd9a5c6ce62c7b9e3dfc930c66605dced7f1ec0514d191c09a2ce98d6d52b66e3315ffa79
+  languageName: node
+  linkType: hard
+
+"@noble/hashes@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@noble/hashes@npm:1.3.0"
+  checksum: d7ddb6d7c60f1ce1f87facbbef5b724cdea536fc9e7f59ae96e0fc9de96c8f1a2ae2bdedbce10f7dcc621338dfef8533daa73c873f2b5c87fa1a4e05a95c2e2e
+  languageName: node
+  linkType: hard
+
+"@noble/hashes@npm:~1.3.0":
+  version: 1.3.1
+  resolution: "@noble/hashes@npm:1.3.1"
+  checksum: 7fdefc0f7a0c1ec27acc6ff88841793e3f93ec4ce6b8a6a12bfc0dd70ae6b7c4c82fe305fdfeda1735d5ad4a9eebe761e6693b3d355689c559e91242f4bc95b1
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -208,12 +238,66 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@scure/base@npm:~1.1.0":
+  version: 1.1.1
+  resolution: "@scure/base@npm:1.1.1"
+  checksum: b4fc810b492693e7e8d0107313ac74c3646970c198bbe26d7332820886fa4f09441991023ec9aa3a2a51246b74409ab5ebae2e8ef148bbc253da79ac49130309
+  languageName: node
+  linkType: hard
+
+"@scure/bip32@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@scure/bip32@npm:1.3.0"
+  dependencies:
+    "@noble/curves": ~1.0.0
+    "@noble/hashes": ~1.3.0
+    "@scure/base": ~1.1.0
+  checksum: 6eae997f9bdf41fe848134898960ac48e645fa10e63d579be965ca331afd0b7c1b8ebac170770d237ab4099dafc35e5a82995384510025ccf2abe669f85e8918
+  languageName: node
+  linkType: hard
+
+"@scure/bip39@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@scure/bip39@npm:1.2.0"
+  dependencies:
+    "@noble/hashes": ~1.3.0
+    "@scure/base": ~1.1.0
+  checksum: 980d761f53e63de04a9e4db840eb13bfb1bd1b664ecb04a71824c12c190f4972fd84146f3ed89b2a8e4c6bd2c17c15f8b592b7ac029e903323b0f9e2dae6916b
+  languageName: node
+  linkType: hard
+
 "@swc/helpers@npm:0.5.1":
   version: 0.5.1
   resolution: "@swc/helpers@npm:0.5.1"
   dependencies:
     tslib: ^2.4.0
   checksum: 71e0e27234590435e4c62b97ef5e796f88e786841a38c7116a5e27a3eafa7b9ead7cdec5249b32165902076de78446945311c973e59bddf77c1e24f33a8f272a
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:4.29.15":
+  version: 4.29.15
+  resolution: "@tanstack/query-core@npm:4.29.15"
+  checksum: dc99d59a14acf47abdea9c80b038a1ad18531d309b98a91e89f7717f395f5b2ff54f73f6b6dcb3ac66f70f8b410827be5b06eb6f2bceff261287753829e606af
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.29.15":
+  version: 4.29.15
+  resolution: "@tanstack/react-query@npm:4.29.15"
+  dependencies:
+    "@tanstack/query-core": 4.29.15
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: de703806af4efd124f89f03f25d917c7f74329c1df82d2f293ff6fbd6bb259f656f9634203fcef5d2da3920c09dc35046aa9f1e84de3ed2ba84b44bb822b4784
   languageName: node
   linkType: hard
 
@@ -324,6 +408,31 @@ __metadata:
     "@typescript-eslint/types": 5.60.0
     eslint-visitor-keys: ^3.3.0
   checksum: d39b2485d030f9755820d0f6f3748a8ec44e1ca23cb36ddcba67a9eb1f258c8ec83c61fc015c50e8f4a00d05df62d719dbda445625e3e71a64a659f1d248157e
+  languageName: node
+  linkType: hard
+
+"@wagmi/chains@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@wagmi/chains@npm:1.2.0"
+  peerDependencies:
+    typescript: ">=5.0.4"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: adac1caf245820bb50292bf2509be195e8efb3b349dc2ac0e0ed7370993b5fed93db57deaf4d27192b20e8418e9f10cdc7a59bd0a6ce1ac0447e61af76efe423
+  languageName: node
+  linkType: hard
+
+"abitype@npm:0.8.7":
+  version: 0.8.7
+  resolution: "abitype@npm:0.8.7"
+  peerDependencies:
+    typescript: ">=5.0.4"
+    zod: ^3 >=3.19.1
+  peerDependenciesMeta:
+    zod:
+      optional: true
+  checksum: 4351466808969bcc73e5c535c3d96bb687ee2be0bccd48eba024c47e6cc248f0c8bd368f9e42dab35d39923e63b1349ade470f72812de27127968caf1a1426c9
   languageName: node
   linkType: hard
 
@@ -1755,6 +1864,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"isomorphic-ws@npm:5.0.0":
+  version: 5.0.0
+  resolution: "isomorphic-ws@npm:5.0.0"
+  peerDependencies:
+    ws: "*"
+  checksum: e20eb2aee09ba96247465fda40c6d22c1153394c0144fa34fe6609f341af4c8c564f60ea3ba762335a7a9c306809349f9b863c8beedf2beea09b299834ad5398
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -2770,11 +2888,11 @@ __metadata:
 
 "typescript@patch:typescript@5.1.3#~builtin<compat/typescript>":
   version: 5.1.3
-  resolution: "typescript@patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=77c9e2"
+  resolution: "typescript@patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=5da071"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 32a25b2e128a4616f999d4ee502aabb1525d5647bc8955e6edf05d7fbc53af8aa98252e2f6ba80bcedfc0260c982b885f3c09cfac8bb65d2924f3133ad1e1e62
+  checksum: 6f0a9dca6bf4ce9dcaf4e282aade55ef4c56ecb5fb98d0a4a5c0113398815aea66d871b5611e83353e5953a19ed9ef103cf5a76ac0f276d550d1e7cd5344f61e
   languageName: node
   linkType: hard
 
@@ -2806,10 +2924,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
+  languageName: node
+  linkType: hard
+
 "viem-playground@workspace:.":
   version: 0.0.0-use.local
   resolution: "viem-playground@workspace:."
   dependencies:
+    "@tanstack/react-query": ^4.29.15
     "@types/node": 20.3.1
     "@types/react": 18.2.13
     "@types/react-dom": 18.2.6
@@ -2819,8 +2947,28 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     typescript: 5.1.3
+    viem: ^1.1.4
   languageName: unknown
   linkType: soft
+
+"viem@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "viem@npm:1.1.4"
+  dependencies:
+    "@adraffy/ens-normalize": 1.9.0
+    "@noble/curves": 1.0.0
+    "@noble/hashes": 1.3.0
+    "@scure/bip32": 1.3.0
+    "@scure/bip39": 1.2.0
+    "@wagmi/chains": 1.2.0
+    abitype: 0.8.7
+    isomorphic-ws: 5.0.0
+    ws: 8.12.0
+  peerDependencies:
+    typescript: ">=5.0.4"
+  checksum: 1eaa4904b941af56e4b5662930609c85284496d907229626a40802b50615d41459eccb334dd133672c7240314ebb107afbb4a96aa521a93fe774bc60316959df
+  languageName: node
+  linkType: hard
 
 "watchpack@npm:2.4.0":
   version: 2.4.0
@@ -2881,6 +3029,21 @@ __metadata:
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
   checksum: 159da4805f7e84a3d003d8841557196034155008f817172d4e986bd591f74aa82aa7db55929a54222309e01079a65a92a9e6414da5a6aa4b01ee44a511ac3ee5
+  languageName: node
+  linkType: hard
+
+"ws@npm:8.12.0":
+  version: 8.12.0
+  resolution: "ws@npm:8.12.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 818ff3f8749c172a95a114cceb8b89cedd27e43a82d65c7ad0f7882b1e96a2ee6709e3746a903c3fa88beec0c8bae9a9fcd75f20858b32a166dfb7519316a5d7
   languageName: node
   linkType: hard
 
