@@ -1,13 +1,24 @@
 "use client";
-import Image from "next/image";
-import styles from "./page.module.css";
-import { useBlockNumber } from "./queries";
+import {
+  useBlock,
+  useBlockNumber,
+  useBlockTransactionCount,
+  useChainId,
+} from "./queries";
+// import { walletClient } from "./vendor/viem";
 
 export default function Home() {
-  const { data } = useBlockNumber();
+  const { data: blockNumberData } = useBlockNumber();
+  const { data: blockData } = useBlock();
+  const { data: blockTransactionCountData } = useBlockTransactionCount();
+  const { data: chainIdData } = useChainId();
 
-  if (data === null) {
-    return null;
-  }
-  return <main>{data?.toString()}</main>;
+  return (
+    <main>
+      <div>{blockNumberData?.toString()}</div>
+      <div>{blockData?.hash?.toLocaleString()}</div>
+      <div>{blockTransactionCountData}</div>
+      <div>{chainIdData}</div>
+    </main>
+  );
 }
