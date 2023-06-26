@@ -1,4 +1,5 @@
 "use client";
+import Profile from "./component/profile";
 import {
   useBlock,
   useBlockNumber,
@@ -15,6 +16,7 @@ export default function Home() {
 
   return (
     <main>
+      <Profile />
       <div>{blockNumberData?.toString()}</div>
       <div>{blockData?.hash?.toLocaleString()}</div>
       <div>{blockTransactionCountData}</div>

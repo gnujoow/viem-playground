@@ -1,8 +1,8 @@
 "use client";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import React from "react";
+import { ReactQueryProvider } from "./ReactQueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,15 +16,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [queryClient] = React.useState(() => new QueryClient());
-
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
-      </body>
-    </html>
+    <ReactQueryProvider>
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </ReactQueryProvider>
   );
 }
